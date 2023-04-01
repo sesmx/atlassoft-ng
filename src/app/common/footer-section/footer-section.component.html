@@ -1,0 +1,78 @@
+<footer class="gray-bg">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="iq-fw-7 mb-3">Company</h4>
+                    <ul class="d-block">
+                        <li class="d-block  iq-fw-6 mb-2" *ngFor="let menu of this.menueItems.slice(0, 4)">
+                            <a routerLink="{{ menu.routePath }}" class="text-gray">{{ menu.routeTitle }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="iq-fw-7 mb-3">Portfolio</h4>
+                    <ul class="d-block">
+                        <li class="d-block iq-fw-6 mb-2" *ngFor="let item of this.portfolioData.slice(0, 4)">
+                            <a routerLink="/portfolio/{{ item.id }}" class="text-gray">{{ item.name }}</a>
+                        </li>
+                        <li class="d-block iq-fw-6 mb-2">
+                            <a class="text-gray" routerLink="/portfolio">more...</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0 mb-md-0">
+                    <h4 class="iq-fw-7 mb-3">Help</h4>
+                    <ul class="d-block">
+                        <li class="d-block iq-fw-6 mb-2" *ngFor="let menu of this.supportItems.slice(0, 4)">
+                            <a routerLink="{{ menu.routePath }}" class="text-gray">{{ menu.routeTitle }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="iq-fw-7 mb-4">Quick Contact</h4>
+                    <form>
+                        <input type="email" name="" placeholder="Enter Email" class="subscription-email position-relative form-control d-inline-block" />
+                        <a href="#" class="button subscription-button">Send</a>
+                    </form>
+                    <ul class="list-inline mb-5">
+                        <li class="list-inline-item iq-fw-6 text-black">
+                            <i class="fas fa-phone"></i><span class="ml-2 text-gray">{{ this.locations[0].contactNo }}</span>
+                        </li>
+                        <li class="list-inline-item ml-3 iq-fw-6 text-black">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span class="ml-2 text-gray">
+                                <a [attr.href]="'mailto:' + this.supportmail" class="__cf_email__">{{ this.supportmail }}</a>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item iq-fw-6 mr-3" *ngFor="let social of this.socials">
+                            <a [attr.href]="social.link" [target]="social.socialTarget" class="text-gray">
+                                <i [class]="social.icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="col-auto mr-auto">
+                    <ul class="list-inline">
+                        <li class="list-inline-item mr-3 r-font-12">
+                            <a href="#" class="text-gray iq-fw-6">Terms &amp; Conditions</a>
+                        </li>
+                        <li class="list-inline-item r-font-12">
+                            <a href="#" class="text-gray iq-fw-6">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto r-font-12">
+                    <a href="" class="text-gray iq-fw-6">&copy; Atlas Software Technologies Inc. {{ this.startyear }} - {{ this.currentyear }}. All rights reserved.</a>
+                </div>
+            </div>
+        </div>
+        <app-scroll-top></app-scroll-top>
+    </div>
+</footer>

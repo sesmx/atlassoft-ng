@@ -1,0 +1,43 @@
+<section class="our-partners">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-box">
+                    <h2 class="title ">Meet Our Partners</h2>
+                    <p class="sub-title">&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ngx-slick-carousel class="slider slider-nav" #slickModal="slick-carousel" [config]="sliderNavConfig">
+                    <div ngxSlickItem *ngFor="let partnerItem of this.partnerList">
+                        <img [src]="partnerItem.logopath" class="img-fluid partner-img" [alt]="partnerItem.name" />
+                    </div>
+                </ngx-slick-carousel>
+                <ngx-slick-carousel class="slider slider-for" #slickModal="slick-carousel" [config]="sliderConfig">
+                    <div ngxSlickItem *ngFor="let partner of this.partnerList">
+                        <div class="row no-gutters align-items-center mt-5 mb-5">
+                            <div class="col-lg-3">
+                                <img [src]="partner.imagepath" class="img-fluid" [alt]="partner.name" />
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="partner-details mt-5 mt-lg-0">
+                                    <div class="media">
+                                        <img class="align-self-center mr-4" [src]="partner.logopath" [alt]="partner.name" />
+                                        <div class="media-body">
+                                            <h2 class="mt-0 iq-fw-8">
+                                                <a href="javascript:void(0);">{{ partner.name }}</a>
+                                            </h2>
+                                            <p>{{ partner.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</section>

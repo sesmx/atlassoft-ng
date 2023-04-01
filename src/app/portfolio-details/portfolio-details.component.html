@@ -1,0 +1,24 @@
+<div class="main-content">
+    <app-navigation-map [middleNavs]="breadcrumbNavArray"></app-navigation-map>
+    <div class="main-content">
+        <section class="iq-login-regi">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-5 mb-lg-0 mb-md-0">
+                        <h2>{{ selectedProfile?.name }}</h2>
+                        <p class="mt-3 mb-4">{{ selectedProfile?.description }}</p>
+                        <h5>{{ selectedProfile?.technologies }}</h5>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="iq-login iq-rmt-20">
+                            <img class="img-padding img-cursor" [src]="selectedProfile?.imagepath" [alt]="selectedProfile?.name" />
+                            <h5>
+                                <a [attr.href]="selectedProfile?.link" target="_blank">{{ selectedProfile?.link }}</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

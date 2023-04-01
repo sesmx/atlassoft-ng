@@ -1,0 +1,73 @@
+<div class="main-content">
+    <app-navigation-map></app-navigation-map>
+    <div class="main-content">
+        <section class="contact-info">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6">
+                        <div class="iq-contact">
+                            <h3 class="mb-5 font-weight-bold">Get in Touch With Us</h3>
+                            <div class="contact-form">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="section-field mt-3">
+                                            <input class="require contact-first-name" id="contact_name" type="text" placeholder="Name" name="name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="section-field mt-3">
+                                            <input class="require contact-email" id="contact_email" type="email" placeholder="Email" name="email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="section-field mt-3">
+                                            <input class="require contact-phone" id="company_name" type="text" placeholder="Phone Number" name="Phone Number" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="section-field textarea mt-3">
+                                            <textarea id="contact_message"class="input-message require contact-message"placeholder="How can we help you?"rows="5"name="message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="button pull-right mt-5 mb-5 mb-lg-0 contact-us-button">
+                                    Send Message
+                                </button>
+                                <span class="ml-10" id="result"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <h2 class="iq-fw-8 mb-5">Contact With Us</h2>
+                        <div class="our-detail mb-4" *ngFor="let location of this.locations">
+                            <div class="icone-box mr-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="main-detail">
+                                <h4 class="iq-fw-8">{{ location.country }}</h4>
+                                <p>{{ location.address }}</p>
+                                <p><strong>Contact No.</strong>&nbsp;{{ location.contactNo }}</p>
+                            </div>
+                        </div>
+                        <ul class="list-inline mb-4">
+                            <li class="list-inline-item iq-fw-6 mr-3" *ngFor="let social of this.socials">
+                                <a [target]="social.socialTarget" [attr.href]="social.link" class="text-gray">
+                                    <i [class]="social.icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-map pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <iframe class="w-100" [src]="this.locations[0].map | safe" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

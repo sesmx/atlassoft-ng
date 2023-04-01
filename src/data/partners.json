@@ -1,0 +1,20 @@
+[
+    {
+      "name": "Microsoft",
+      "logopath": "../../../assets/images/partners/logo/microsoft_logo.png",
+      "imagepath": "../../../assets/images/partners/banner/microsoftbigimg.png",
+      "description": "Integrate your apps with office 365, microsoft graph, the microsoft identity platform and windows to build people-centric experience."
+    },
+    {
+      "name": "SharePoint",
+      "logopath": "../../../assets/images/partners/logo/sharepoint_logo.png",
+      "imagepath": "../../../assets/images/partners/banner/sharepointbigimg.png",
+      "description": "We at Atlas Software Technology have been working in SharePoint since last 8+ years. We have certified dedicated team for SharePoint development. We provide SharePoint consulting to enable organizations to streamline core business processes through collaboration and information management."
+    },
+    {
+      "name": "SharePoint Development Planning Services (SDPS)",
+      "logopath": "../../../assets/images/partners/logo/sdps_logo.png",
+      "imagepath": "../../../assets/images/partners/banner/sdpsbigimg.png",
+      "description": "Maximize your Software Investment in SharePoint by using ObjectWin's SDPS that allows you to use your Microsoft Software Assurance for Volume Licensing benefits for effective deployment of SharePoint."
+    }
+]

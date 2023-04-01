@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Beam Suntory Inc",
+        "imagepath": "../../../assets/images/clients/gray/beam.png",
+        "description": ""
+    },
+    {
+        "name": "Artificial Learning System",
+        "imagepath": "../../../assets/images/clients/gray/artificial.png",
+        "description": ""
+    },
+    {
+        "name": "Aabcor Inc",
+        "imagepath": "../../../assets/images/clients/gray/abcorinic.png",
+        "description": ""
+    },
+    {
+        "name": "Hewlett Packard",
+        "imagepath": "../../../assets/images/clients/gray/hp.png",
+        "description": ""
+    },
+    {
+        "name": "Sun Microsystems",
+        "imagepath": "../../../assets/images/clients/gray/sun.png",
+        "description": ""
+    },
+    {
+        "name": "Citi Bank",
+        "imagepath": "../../../assets/images/clients/gray/city.png",
+        "description": ""
+    },
+    {
+        "name": "Golden Apple Foundation",
+        "imagepath": "../../../assets/images/clients/gray/apple.png",
+        "description": ""
+    },
+    {
+        "name": "PNC Bank",
+        "imagepath": "../../../assets/images/clients/gray/pnc.png",
+        "description": ""
+    },
+    {
+        "name": "Society of Automotive Engineers",
+        "imagepath": "../../../assets/images/clients/gray/automotive.png",
+        "description": ""
+    },
+    {
+        "name": "Women for Women International",
+        "imagepath": "../../../assets/images/clients/gray/women.png",
+        "description": ""
+    },
+    {
+        "name": "Army Corps of Engineers",
+        "imagepath": "../../../assets/images/clients/gray/army.png",
+        "description": ""
+    },
+    {
+        "name": "General Instruments",
+        "imagepath": "../../../assets/images/clients/gray/general.png",
+        "description": ""
+    }
+]

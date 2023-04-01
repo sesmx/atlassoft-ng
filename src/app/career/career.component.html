@@ -1,0 +1,35 @@
+<div class="main-content">
+    <app-navigation-map></app-navigation-map>
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let career of this.careerOptions" class="col-sm-12 col-lg-6">
+                    <div class="blog-box mt-5">
+                        <div class="row no-gutters row-eq-height pb-4">
+                            <div class="col-sm-6 iq-shadow">
+                                <div class="content">
+                                    <h6 class="mb-2">{{ career.jobrole }}</h6>
+                                    <ul>
+                                        <li>
+                                            <span>Experience:</span>
+                                            <a href="javascript:void(0);">&nbsp;{{ career.experience }}</a>
+                                        </li>
+                                    </ul>
+                                    <p class="mt-4">{{ career.shortdesc }}</p>
+                                    <ul class="iq-tag mt-4">
+                                        <li>
+                                            <a [attr.href]="'mailto:' + this.resumeSendEmail">Apply</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 div-border">
+                                <img class="img-fluid" [src]="career.imagepath" [alt]="career.jobrole" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+</div>

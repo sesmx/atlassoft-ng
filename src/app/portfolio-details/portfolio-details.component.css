@@ -1,0 +1,23 @@
+.iq-login {
+    padding: 30px 30px;
+    background-position: left center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    /*border: 1px solid #004c97;
+    border-radius: 5px;*/
+    text-align: center;
+}
+.iq-login-regi {
+    padding: 30px 30px;
+    background-position: left center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    /*border: 2px solid #004c97;
+    border-radius: 0px;*/
+}
+.img-padding {
+    margin: 5% 0;
+}
+.img-cursor {
+    cursor: pointer;
+}

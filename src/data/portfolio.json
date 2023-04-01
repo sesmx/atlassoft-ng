@@ -1,0 +1,119 @@
+[
+    {
+      "id": "uncledan",
+      "name": "Uncle Dan's",
+      "imagepath": "../../../assets/images/portfolio/uncledan.jpg",
+      "shortDescription":  "Uncle Dan's is a eCommerce web application. It is a premier specialty outdoor retailers.",
+      "description": "Uncle Dan's is an eCommerce web application. It is a premier specialty outdoor retailers in Chicago. The Company offers jackets, coats, pants, shirts, t-shirts, as well as foot wears, tops, belts, wallets, and other products through this web application. CSS3 with JavaScript, ASP.NET has been used as scripting language, MSSQL Database, HTML in bootstrap framework",
+      "technologies": "ASP.NET, MSSQL, JavaScript, HTML, CSS",
+      "link": "https://udans.com/"
+    },
+    {
+      "id": "beamsuntory",
+      "name": "Beam Suntory",
+      "imagepath": "../../../assets/images/portfolio/beam.jpg",
+      "shortDescription": "Our team provides technical support for one of the SharePoint host",
+      "description": "Our team provides technical support for one of the SharePoint hosted Application Portal for our customer Beam-Suntory. urrently under this contract we are taking care of both Application and Platform side SharePoint 2013 based logistics where the Beam-Suntory Portal Application is hosted. Our team is involved in day to day ITIL activities, which includes managing Service Requests, Incidents and Change Requests for the Beam-Suntory SharePoint Portal.",
+      "technologies": "SharePoint 2013, Microsoft SQL Server, JavaScript, TypeScript, Angular",
+      "link": "https://www.beamsuntory.com/"
+    },
+    {
+      "id": "goldenapple",
+      "name": "Golden Apple",
+      "imagepath": "../../../assets/images/portfolio/goldenapple.jpg",
+      "shortDescription": "Golden Apple prepares highly-effective teachers for rural",
+      "description": "Golden Apple prepares highly-effective teachers for rural, suburban and urban schools-of-need in Illinois. Through our Scholars Program, we are committed to making a material difference in resolving the Illinois teacher shortage by recruiting, preparing, placing, mentoring and retaining high-quality teachers in schools throughout Illinoi",
+      "technologies": "PHP, Perl. CMS-Squarespace, MySql, JavaScript, jQuery",
+      "link": "https://www.goldenapple.org/"
+    },
+    {
+      "id": "attorneyweb",
+      "name": "Attorney Web",
+      "imagepath": "../../../assets/images/portfolio/attorney.jpg",
+      "shortDescription": "Attorney George H. Weber brings the power of debt relief to his bankrupt",
+      "description": "Attorney George H. Weber brings the power of debt relief to his bankruptcy clients. He has assisted his clients discharge millions of dollars of unsecured debt through the bankruptcy process. This is a tremendous relief to his clients who are overwhelmed by debt. Attorney Weber is pleased to provide this potentially life-saving economic relief to his clients",
+      "technologies": "PHP, MySql, JavaScript, jQuery, CSS3",
+      "link": "https://www.attorneyweber.com/"
+    },
+    {
+      "id": "womenforwomen",
+      "name": "Women For Women",
+      "imagepath": "../../../assets/images/portfolio/women.jpg",
+      "shortDescription": "Since 1993, Women for Women International has helped more than",
+      "description": "Since 1993, Women for Women International has helped more than 478,000 marginalized women in countries affected by war and conflict. We serve women in 8 countries offering support, tools, and access to life-changing skills to move from crisis and poverty to stability and economic self-sufficient.",
+      "technologies": "ASP.NET, MSSQL, jQuery UI, CSS3, Apache web server",
+      "link": "https://www.womenforwomen.org/"
+    },
+    {
+      "id": "sahastra",
+      "name": "Sahastra",
+      "imagepath": "../../../assets/images/portfolio/sahastra.jpg",
+      "shortDescription": "Sahastra needs to accommodate changes after having the continuous",
+      "description": "Sahastra needs to accommodate changes after having the continuous feed backs from the different clients. That has been achieved through the DevOps methodology which accommodates the continuous integration (commit code, Unit and integration testing), continuous delivery (deploy to the test environment, acceptance testing) and continuous deployment (deploy production).",
+      "technologies": "DevOps, Vue.js, Python API, Cassandra, JavaScript, CSS3",
+      "link": "http://sahastra.artelus.com/"
+    },
+    {
+      "id": "cpehr",
+      "name": "CPE HR",
+      "imagepath": "../../../assets/images/portfolio/cpehr.jpg",
+      "shortDescription": "Having an outsourced Human Resources firm like CPEhr can reduce the costs",
+      "description": "Having an outsourced Human Resources firm like CPEhr can reduce the costs of hiring additional staff and personnel by working toward improving and polishing the skills of current employees. Our team will work towards developing specialized and skill-specific training which can improve relationships with your employee’s and increase employee retention.",
+      "technologies": "Wordpress, PHP7, jQuery",
+      "link": "https://www.cpehr.com/"
+    },
+    {
+      "id": "silverservice",
+      "name": "Silver Service Events",
+      "imagepath": "../../../assets/images/portfolio/silverservice.jpg",
+      "shortDescription": "Whatever you need for an event, we never fail to deliver. If you desire to have",
+      "description": "Whatever you need for an event, we never fail to deliver. If you desire to have that perfect lunch for a bridal shower, a totally unforgettable reception for a wedding, a range of hors d’oeuvres for that fun-filled birthday party, a memorable victory party, or perhaps, a successful conference where attendees gain knowledge and have fun, then the expertise of Silver Service Events is the solution.",
+      "technologies": "PHP, CMS, MySQL, JavaScript, jQuery, CSS3",
+      "link": "http://www.silverserviceevents.com/"
+    },
+    {
+      "id": "abcorinc",
+      "name": "Abcor Inc.",
+      "imagepath": "../../../assets/images/portfolio/abcor.jpg",
+      "shortDescription": "Aabcor, Inc., is a woman and minority-owned business, certified by Illinois",
+      "description": "Aabcor, Inc., is a woman and minority-owned business, certified by Illinois' Business Enterprise Program (BEP). We were established in 1997 as a private case management company. For more than 20 years, we have worked with over 5,000+ clients and understand the importance of providing individualized care.",
+      "technologies": "PHP, MySQL, JavaScript, jQuery, CSS3",
+      "link": "https://www.aabcorinc.com/"
+    },
+    {
+      "id": "sae",
+      "name": "SAE",
+      "imagepath": "../../../assets/images/portfolio/sae.jpg",
+      "shortDescription": "Likewise, Horace Swetland used his editorial pen to become the de facto",
+      "description": "Likewise, Horace Swetland used his editorial pen to become the de facto voice of the automobile engineer of that day, and he became an original SAE officer. Swetland was a man who would leave an indelible mark on the path of SAE history. A mere 27 months after Heldt's editorial the Society of Automobile Engineers was born. Headquartered in a New York City office, four officers and five managing officers volunteered their time and energy to the cause.",
+      "technologies": "PHP, MySQL, JavaScript, jQuery, CSS3",
+      "link": "https://www.sae.org/"
+    },
+    {
+      "id": "infogps",
+      "name": "Info GPS",
+      "imagepath": "../../../assets/images/portfolio/infogps.jpg",
+      "shortDescription": "Cyber Defense has evolved into a holistic approach that requires corporate wide attention",
+      "description": "Cyber Defense has evolved into a holistic approach that requires corporate wide attention and participation. The new formula (Cyber Defense = Network Defense + Data Defense™) means we all have a role to play across the organization. To help, we created Info GPS 3D.",
+      "technologies": "JavaEE, MySQL, jQuery, Web API, CSS3, HTML5",
+      "link": "https://www.infogpsnetworks.com/"
+    },
+    {
+      "id": "worldsync",
+      "name": "1WorldSync",
+      "imagepath": "../../../assets/images/portfolio/worldsync.jpg",
+      "shortDescription": "We empower retailers, operators, distributors to operate efficient & cost-effective supply chains",
+      "description": "We empower retailers, operators, and distributors to operate efficient and cost-effective supply chains. Our extensive customer community drives connected commerce across the globe. Visit our community page to get started synchronizing your data with our customers today.",
+      "technologies": "ASP.NET, MSSQL, jQuery UI, CSS3, HTML5",
+      "link": "https://www.1worldsync.com/"
+    },
+    {
+      "id": "aha",
+      "name": "American Health Association",
+      "imagepath": "../../../assets/images/portfolio/aha.jpg",
+      "shortDescription": "American Health Associates is a fully licensed & insured clinical reference laboratory",
+      "description": "American Health Associates is a fully licensed and insured clinical reference laboratory founded in October of 1990. Our corporate headquarters and main testing facility is located in the Ft. Lauderdale area with additional locations throughout the southeastern United States.",
+      "technologies": "ASP.NET, MSSQL, jQuery UI, CSS3, HTML5",
+      "link": "http://www.americanhealthassociates.com/"
+    }
+]

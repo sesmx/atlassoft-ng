@@ -1,0 +1,19 @@
+<div class="breadcrumb-main breadcrumb-lite">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a routerLink="/" class="iq-fw-6"><i class="ion-android-home"></i>Home</a>
+                        </li>
+                        <li class="breadcrumb-item" *ngFor="let menuItem of middleNavs">
+                            <a routerLink="{{ menuItem.path }}" class="iq-fw-6">{{ menuItem.name }}</a>
+                        </li>
+                        <li class="breadcrumb-item active iq-fw-6" aria-current="page">{{ this.currentRouteName }}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

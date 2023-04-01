@@ -1,0 +1,21 @@
+<div class="main-content">
+    <app-navigation-map></app-navigation-map>
+    <div class="main-content">
+        <section class="tech-ptb pb-0" *ngFor="let techItem of this.technologies; let indexOfelement = index">
+            <div class="container">
+                <div [class]="(indexOfelement + 1) % 2 === 0 ? 'row flex-row-reverse align-items-center' : 'row align-items-center'">
+                    <div [class]="(indexOfelement + 1) % 2 === 0 ? 'col-lg-6 text-right' : 'col-lg-6'">
+                        <img [src]="techItem.imagepath" class="img-fluid" [alt]="techItem.header" />
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="title-main mb-4">
+                            <div class="tech-no">{{ indexOfelement + 1 | zeroprefix }}</div>
+                            <h2 class="iq-fw-8 d-inline-block">{{ techItem.header }}</h2>
+                        </div>
+                        <p class="iq-fw-6 mb-lg-0 mb-4">{{ techItem.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

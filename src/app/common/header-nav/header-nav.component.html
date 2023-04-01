@@ -1,0 +1,26 @@
+<app-loader *ngIf="this.showLoader"></app-loader>
+<header id="header" [class]="this.routeurl === '/' ? '' : 'fixed'">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" routerLink="/">
+                        <img class="logo img-logo" src="../../../assets/images/logo.png" alt="Atlas Software Technologies" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <ng-container *ngFor="let routeItem of this.routeArray">
+                                <li class="nav-item" *ngIf="this.routeItem.includeInNav">
+                                    <a [class]="this.routeurl === this.routeItem.routePath ? 'nav-link active' : 'nav-link'" [routerLink]="this.routeItem.routePath">{{ this.routeItem.routeTitle }}</a>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

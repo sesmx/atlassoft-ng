@@ -1,0 +1,15 @@
+.bg-over-main-90:before {
+    background: rgba(0, 76, 151, 0.9);
+    /*background-image: radial-gradient(circle at 1% 1%, #328bf2, #1644ad);*/
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  .text-bold {
+    font-weight: bold;
+    text-decoration: underline;
+  }
