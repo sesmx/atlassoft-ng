@@ -8,6 +8,7 @@ import { CareerComponent } from './career/career.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details.component';
 import { ContactComponent } from './contact/contact.component';
+import { CommonErrorComponent } from './common-error/common-error.component';
 
 const routes: Routes = [
   {
@@ -72,13 +73,24 @@ const routes: Routes = [
       includeNav: true,
       isSupport: true
     }
+  },
+  {
+    path: '**',
+    component: CommonErrorComponent,
+    pathMatch: 'full',
+    data: {
+      title: 'Page not found',
+      includeNav: false,
+      isSupport: false
+    }
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled'
-  })],
+    scrollPositionRestoration: 'enabled',
+    initialNavigation: 'enabledBlocking'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

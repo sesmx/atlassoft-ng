@@ -25,6 +25,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { ScrollTopComponent } from './common/scroll-top/scroll-top.component';
 import { CookieBarComponent } from './common/cookie-bar/cookie-bar.component';
+import { CommonErrorComponent } from './common-error/common-error.component';
 
 @NgModule({
   declarations: [
@@ -47,10 +48,11 @@ import { CookieBarComponent } from './common/cookie-bar/cookie-bar.component';
     ContactComponent,
     SafePipe,
     ScrollTopComponent,
-    CookieBarComponent
+    CookieBarComponent,
+    CommonErrorComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     CarouselModule,
     SlickCarouselModule,

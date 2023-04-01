@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/atlassoft-ng",
+            "outputPath": "dist/atlassoft-ng/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -109,6 +109,59 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/atlassoft-ng/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "atlassoft-ng:build:development",
+              "serverTarget": "atlassoft-ng:server:development"
+            },
+            "production": {
+              "browserTarget": "atlassoft-ng:build:production",
+              "serverTarget": "atlassoft-ng:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "atlassoft-ng:build:production",
+              "serverTarget": "atlassoft-ng:server:production"
+            },
+            "development": {
+              "browserTarget": "atlassoft-ng:build:development",
+              "serverTarget": "atlassoft-ng:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
