@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import clients from '../../../data/clients.json';
-import { Client } from '../../../Models/Client';
+import { Client } from '../../../models/Client';
 
 @Component({
   selector: 'app-client-section',

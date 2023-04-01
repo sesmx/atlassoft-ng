@@ -3,8 +3,8 @@ import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import portfolio from '../../data/portfolio.json';
 import common from '../../data/common.json';
-import { Portfolio } from '../../Models/Portfolio';
-import { Breadcrumb } from 'src/Models/Breadcrumb';
+import { Portfolio } from '../../models/Portfolio';
+import { Breadcrumb } from 'src/models/Breadcrumb';
 
 @Component({
   selector: 'app-portfolio-details',

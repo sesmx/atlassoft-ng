@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import common from '../../data/common.json';
 import careers from '../../data/careers.json';
-import { Career } from '../../Models/Career';
+import { Career } from '../../models/Career';
 
 @Component({
   selector: 'app-career',

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import common from '../../data/common.json';
 import technology from '../../data/technology.json';
-import { Technology } from '../../Models/Technology';
+import { Technology } from '../../models/Technology';
 
 @Component({
   selector: 'app-technology',

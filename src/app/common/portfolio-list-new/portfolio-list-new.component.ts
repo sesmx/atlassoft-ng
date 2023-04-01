@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import portfolio from '../../../data/portfolio.json';
-import { Portfolio } from '../../../Models/Portfolio';
+import { Portfolio } from '../../../models/Portfolio';
 
 @Component({
   selector: 'app-portfolio-list-new',

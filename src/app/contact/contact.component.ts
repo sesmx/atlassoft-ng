@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import common from '../../data/common.json';
-import { Location } from '../../Models/Location';
-import { Social } from '../../Models/Social';
+import { Location } from '../../models/Location';
+import { Social } from '../../models/Social';
 
 @Component({
   selector: 'app-contact',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import partners from '../../../data/partners.json';
-import { Partner } from '../../../Models/Partner';
+import { Partner } from '../../../models/Partner';
 
 @Component({
   selector: 'app-partners',

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Breadcrumb } from '../../../Models/Breadcrumb';
+import { Breadcrumb } from '../../../models/Breadcrumb';
 
 @Component({
   selector: 'app-navigation-map',

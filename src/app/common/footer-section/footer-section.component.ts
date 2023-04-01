@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import common from '../../../data/common.json';
 import portfolio from '../../../data/portfolio.json';
-import { Location } from '../../../Models/Location';
-import { Social } from '../../../Models/Social';
-import { Portfolio } from '../../../Models/Portfolio';
-import { RouteObject } from '../../../Models/RouteObject';
+import { Location } from '../../../models/Location';
+import { Social } from '../../../models/Social';
+import { Portfolio } from '../../../models/Portfolio';
+import { RouteObject } from '../../../models/RouteObject';
 
 @Component({
   selector: 'app-footer-section',
