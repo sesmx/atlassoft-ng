@@ -1,5 +1,5 @@
 <app-loader *ngIf="this.showLoader"></app-loader>
-<header id="header" [class]="this.routeurl === '/' ? '' : 'fixed'">
+<header *ngIf="isHeaderNavVisible" id="header" [class]="this.routeurl === '/' ? '' : 'fixed'">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-10">
@@ -14,7 +14,7 @@
                         <ul class="navbar-nav ml-auto">
                             <ng-container *ngFor="let routeItem of this.routeArray">
                                 <li class="nav-item" *ngIf="this.routeItem.includeInNav">
-                                    <a [class]="this.routeurl === this.routeItem.routePath ? 'nav-link active' : 'nav-link'" [routerLink]="this.routeItem.routePath">{{ this.routeItem.routeTitle }}</a>
+                                    <a [class]="this.routeurl === this.routeItem.routePath || (this.routeItem.routePath.includes('portfolio') && this.routeurl.includes('/portfolio/')) ? 'nav-link active' : 'nav-link'" [routerLink]="this.routeItem.routePath">{{ this.routeItem.routeTitle }}</a>
                                 </li>
                             </ng-container>
                         </ul>

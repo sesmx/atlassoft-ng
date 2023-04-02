@@ -10,6 +10,7 @@ import { RouteObject } from '../../../models/RouteObject';
 export class HeaderNavComponent implements OnInit {
   routeurl: string = '/';
   subrouteurl: string = '';
+  isHeaderNavVisible: boolean = false;
   routeArray: RouteObject[] = [];
   showLoader: boolean = false;
 
@@ -24,6 +25,12 @@ export class HeaderNavComponent implements OnInit {
         this.routeurl = this.router.parseUrl(event.url).toString();
         this.subrouteurl = this.route.snapshot.paramMap.get('id') ?? '';
         
+        if (this.router.url === '/error') {
+          this.isHeaderNavVisible = false;
+        } else {
+          this.isHeaderNavVisible = true;
+        }
+
         setTimeout(() => {
           this.showLoader = false;
         }, 500);
@@ -32,6 +39,13 @@ export class HeaderNavComponent implements OnInit {
         // Hide progress spinner or progress bar
         // Present error to user
         console.log(event.error);
+
+        if (this.router.url === '/error') {
+          this.isHeaderNavVisible = false;
+        } else {
+          this.isHeaderNavVisible = true;
+        }
+
         setTimeout(() => {
           this.showLoader = false;
         }, 500);
@@ -50,10 +64,5 @@ export class HeaderNavComponent implements OnInit {
         isSupport: routerItem['data']?.['isSupport']
       });
     });
-
-    /*this.routeArray.forEach(r => {
-      console.log(r.routePath, r.routePath.includes('/portfolio/'));
-      console.log("includeInNav", !r.includeInNav);
-    });*/
   }
 }

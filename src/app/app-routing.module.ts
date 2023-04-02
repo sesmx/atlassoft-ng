@@ -76,8 +76,11 @@ const routes: Routes = [
   },
   {
     path: '**',
+    redirectTo: 'error'
+  },
+  {
+    path: 'error',
     component: CommonErrorComponent,
-    pathMatch: 'full',
     data: {
       title: 'Page not found',
       includeNav: false,

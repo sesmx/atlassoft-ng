@@ -16,7 +16,8 @@ export class NavigationMapComponent {
       if (this.router.parseUrl(this.router.url).toString() === `/${routerItem['path']}`) {
         this.currentRouteName = routerItem['data']?.['title'];
       } else if (this.route.snapshot.paramMap.get('id') !== undefined && this.route.snapshot.paramMap.get('id') !== null && !routerItem['data']?.['includeNav']) {
-        this.currentRouteName = routerItem['data']?.['title'];
+        console.log("pocha", routerItem['data']);
+        this.currentRouteName = this.currentRouteName === '' ? routerItem['data']?.['title'] : this.currentRouteName;
       }
     });
   }

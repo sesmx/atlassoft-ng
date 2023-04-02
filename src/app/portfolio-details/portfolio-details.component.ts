@@ -29,6 +29,9 @@ export class PortfolioDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedProfile = portfolio.find(o => o.id === this.route.snapshot.paramMap.get('id'))
+    this.selectedProfile = portfolio.find(o => o.id === this.route.snapshot.paramMap.get('id'));
+    if (this.selectedProfile === undefined) {
+      this.router.navigate(['/error']);
+    }
   }
 }
