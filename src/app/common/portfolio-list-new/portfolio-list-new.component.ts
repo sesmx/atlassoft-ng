@@ -1,6 +1,6 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import portfolio from '../../../data/portfolio.json';
+import { PortfolioService } from '../../services/portfolio.service';
 import { Portfolio } from '../../../models/Portfolio';
 
 @Component({
@@ -8,10 +8,18 @@ import { Portfolio } from '../../../models/Portfolio';
   templateUrl: './portfolio-list-new.component.html',
   styleUrls: ['./portfolio-list-new.component.css']
 })
-export class PortfolioListNewComponent implements AfterViewInit {
-  portfolioData: Portfolio[] = portfolio;
+export class PortfolioListNewComponent implements OnInit, AfterViewInit {
+  portfolioData!: Portfolio[];
 
   customOptions: OwlOptions = {};
+
+  constructor(private portfolioService: PortfolioService) { }
+
+  ngOnInit(): void {
+    this.portfolioService.getAll().subscribe((data: Portfolio[]) => {
+      this.portfolioData = data;
+    });
+  }
 
   ngAfterViewInit(): void {
     this.customOptions = {

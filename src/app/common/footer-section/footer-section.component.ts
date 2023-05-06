@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Event, NavigationEnd, NavigationError, Router } from '@angular/router';
-import common from '../../../data/common.json';
-import portfolio from '../../../data/portfolio.json';
+import { CommonService } from '../../services/common.service';
+import { PortfolioService } from '../../services/portfolio.service';
+import { LocationService } from '../../services/location.service';
+import { SocialService } from '../../services/social.service';
 import { Location } from '../../../models/Location';
 import { Social } from '../../../models/Social';
+import { Common } from '../../../models/Common';
 import { Portfolio } from '../../../models/Portfolio';
 import { RouteObject } from '../../../models/RouteObject';
 
@@ -12,19 +15,19 @@ import { RouteObject } from '../../../models/RouteObject';
   templateUrl: './footer-section.component.html',
   styleUrls: ['./footer-section.component.css']
 })
-export class FooterSectionComponent {
+export class FooterSectionComponent implements OnInit {
   isFooterNavVisible: boolean = false;
-  locations: Location[] = common.locations;
-  socials: Social[] = common.social;
-  startyear: string = common.orgStartYear;
+  locations!: Location[];
+  socials!: Social[];
+  startyear!: string;
   currentyear: string = new Date().getFullYear().toString();
-  supportmail: string = common.supportEmail;
-  portfolioData: Portfolio[] = portfolio;
+  supportmail!: string;
+  portfolioData!: Portfolio[];
   routeArray: RouteObject[] = [];
   menueItems: RouteObject[] = [];
   supportItems: RouteObject[] = [];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private portfolioService: PortfolioService, private locationService: LocationService, private socialService: SocialService, private commonService: CommonService) {
     this.router.config.forEach(routerItem => {
       this.routeArray.push({
         routeTitle: routerItem['data']?.['title'],
@@ -53,6 +56,25 @@ export class FooterSectionComponent {
           console.log(event.error);
         }
       }
+    });
+  }
+
+  ngOnInit(): void {
+    this.commonService.getById().subscribe((data: Common) => {
+      this.startyear = data.orgStartYear;
+      this.supportmail = data.supportEmail;
+    });
+
+    this.portfolioService.getAll().subscribe((data: Portfolio[]) => {
+      this.portfolioData = data;
+    });
+
+    this.locationService.getAll().subscribe((data: Location[]) => {
+      this.locations = data;
+    });
+
+    this.socialService.getAll().subscribe((data: Social[]) => {
+      this.socials = data;
     });
   }
 }

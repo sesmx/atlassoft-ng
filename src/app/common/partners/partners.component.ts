@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import partners from '../../../data/partners.json';
+import { Component, OnInit } from '@angular/core';
+import { PartnerService } from '../../services/partner.service'
 import { Partner } from '../../../models/Partner';
 
 @Component({
@@ -7,8 +7,8 @@ import { Partner } from '../../../models/Partner';
   templateUrl: './partners.component.html',
   styleUrls: ['./partners.component.css']
 })
-export class PartnersComponent {
-  partnerList: Partner[] = partners;
+export class PartnersComponent implements OnInit {
+  partnerList!: Partner[];
 
   sliderConfig = {
     slidesToShow: 1,
@@ -50,5 +50,13 @@ export class PartnersComponent {
             }
         }
     ]
+  }
+
+  constructor(private partnerService: PartnerService) { }
+
+  ngOnInit(): void {
+    this.partnerService.getAll().subscribe((data: Partner[]) => {
+      this.partnerList = data;
+    });
   }
 }

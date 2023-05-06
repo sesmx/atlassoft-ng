@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import portfolio from '../../data/portfolio.json';
+import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../services/portfolio.service';
 import { Portfolio } from '../../models/Portfolio';
 
 @Component({
@@ -7,6 +7,14 @@ import { Portfolio } from '../../models/Portfolio';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css']
 })
-export class PortfolioComponent {
-  portfolioData: Portfolio[] = portfolio;
+export class PortfolioComponent implements OnInit {
+  portfolioData!: Portfolio[];
+
+  constructor(private portfolioService: PortfolioService) { }
+
+  ngOnInit(): void {
+    this.portfolioService.getAll().subscribe((data: Portfolio[]) => {
+      this.portfolioData = data;
+    });
+  }
 }

@@ -1,5 +1,6 @@
 export interface Portfolio {
   id: string;
+  order: number;
   name: string;
   imagepath: string;
   shortDescription: string;

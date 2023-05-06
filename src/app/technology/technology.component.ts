@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import common from '../../data/common.json';
-import technology from '../../data/technology.json';
+import { CommonService } from '../services/common.service';
+import { Common } from '../../models/Common';
+import { TechnologyService } from '../services/technology.service';
 import { Technology } from '../../models/Technology';
 
 @Component({
@@ -10,14 +11,22 @@ import { Technology } from '../../models/Technology';
   templateUrl: './technology.component.html',
   styleUrls: ['./technology.component.css']
 })
-export class TechnologyComponent {
-  technologies: Technology[] = technology;
+export class TechnologyComponent implements OnInit {
+  technologies!: Technology[];
 
-  constructor(private titleService: Title, private router: Router) {
+  constructor(private titleService: Title, private router: Router, private technologyService: TechnologyService, private commonService: CommonService) {
     this.router.config.forEach(routerItem => {
       if (this.router.parseUrl(this.router.url).toString() === `/${routerItem['path']}`) {
-        this.titleService.setTitle(`${routerItem['data']?.['title']} - ${common.orgName}`);
+        this.commonService.getById().subscribe((data: Common) => {
+          this.titleService.setTitle(`${routerItem['data']?.['title']} - ${data.orgName}`);
+        });
       }
+    });
+  }
+
+  ngOnInit(): void {
+    this.technologyService.getAll().subscribe((data: Technology[]) => {
+      this.technologies = data;
     });
   }
 }
