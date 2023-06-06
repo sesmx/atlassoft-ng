@@ -1,3 +1,3 @@
 export const environment = {
-    baseApiUrl: 'http://localhost:5135/'
+    baseApiUrl: 'http://ec2-13-233-122-72.ap-south-1.compute.amazonaws.com:5000/'
 };
