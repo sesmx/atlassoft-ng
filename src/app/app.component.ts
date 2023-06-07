@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteReuseStrategy } from '@angular/router';
 
 declare const scrollMenu: any;
 
@@ -10,7 +11,10 @@ declare const scrollMenu: any;
 export class AppComponent implements OnInit {
   title = 'atlassoft-ng';
 
+  constructor(private routeReuse: RouteReuseStrategy) { }
+
   ngOnInit(): void {
+    this.routeReuse.shouldReuseRoute = () => false;
     scrollMenu();
   }
 }

@@ -9,6 +9,8 @@ import { Social } from '../../../models/Social';
 import { Common } from '../../../models/Common';
 import { Portfolio } from '../../../models/Portfolio';
 import { RouteObject } from '../../../models/RouteObject';
+import { BlogService } from 'src/app/services/blog.service';
+import { Blog } from 'src/models/Blog';
 
 @Component({
   selector: 'app-footer-section',
@@ -19,6 +21,7 @@ export class FooterSectionComponent implements OnInit {
   isFooterNavVisible: boolean = false;
   locations!: Location[];
   socials!: Social[];
+  blogs!: Blog[];
   startyear!: string;
   currentyear: string = new Date().getFullYear().toString();
   supportmail!: string;
@@ -27,7 +30,7 @@ export class FooterSectionComponent implements OnInit {
   menueItems: RouteObject[] = [];
   supportItems: RouteObject[] = [];
 
-  constructor(private router: Router, private portfolioService: PortfolioService, private locationService: LocationService, private socialService: SocialService, private commonService: CommonService) {
+  constructor(private router: Router, private portfolioService: PortfolioService, private locationService: LocationService, private socialService: SocialService, private commonService: CommonService, private blogService: BlogService) {
     this.router.config.forEach(routerItem => {
       this.routeArray.push({
         routeTitle: routerItem['data']?.['title'],
@@ -75,6 +78,10 @@ export class FooterSectionComponent implements OnInit {
 
     this.socialService.getAll().subscribe((data: Social[]) => {
       this.socials = data;
+    });
+
+    this.blogService.getAll().subscribe((data: Blog[]) => {
+      this.blogs = data;
     });
   }
 }

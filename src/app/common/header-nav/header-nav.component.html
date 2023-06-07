@@ -14,7 +14,7 @@
                         <ul class="navbar-nav ml-auto">
                             <ng-container *ngFor="let routeItem of this.routeArray">
                                 <li class="nav-item" *ngIf="this.routeItem.includeInNav">
-                                    <a [class]="this.routeurl === this.routeItem.routePath || (this.routeItem.routePath.includes('portfolio') && this.routeurl.includes('/portfolio/')) ? 'nav-link active' : 'nav-link'" [routerLink]="this.routeItem.routePath">{{ this.routeItem.routeTitle }}</a>
+                                    <a [class]="this.routeurl === this.routeItem.routePath || (this.routeItem.routePath.includes('portfolio') && this.routeurl.includes('/portfolio/')) || (this.routeItem.routePath.includes('blog') && this.routeurl.includes('/blog/')) ? 'nav-link active' : 'nav-link'" [routerLink]="this.routeItem.routePath">{{ this.routeItem.routeTitle }}</a>
                                 </li>
                             </ng-container>
                         </ul>

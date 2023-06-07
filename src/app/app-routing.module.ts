@@ -9,6 +9,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { CommonErrorComponent } from './common-error/common-error.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 const routes: Routes = [
   {
@@ -17,7 +19,8 @@ const routes: Routes = [
     data: {
       title: 'Home',
       includeNav: true,
-      isSupport: false
+      isSupport: false,
+      parentNav: null
     }
   },
   {
@@ -26,7 +29,8 @@ const routes: Routes = [
     data: {
       title: 'About Us',
       includeNav: true,
-      isSupport: false
+      isSupport: false,
+      parentNav: null
     }
   },
   {
@@ -35,7 +39,8 @@ const routes: Routes = [
     data: {
       title: 'Technology',
       includeNav: true,
-      isSupport: false
+      isSupport: false,
+      parentNav: null
     }
   },
   {
@@ -44,7 +49,8 @@ const routes: Routes = [
     data: {
       title: 'Portfolio',
       includeNav: true,
-      isSupport: false
+      isSupport: false,
+      parentNav: null
     }
   },
   {
@@ -53,7 +59,8 @@ const routes: Routes = [
     data: {
       title: 'Portfolio Details',
       includeNav: false,
-      isSupport: false
+      isSupport: false,
+      parentNav: 'portfolio'
     }
   },
   {
@@ -62,7 +69,28 @@ const routes: Routes = [
     data: {
       title: 'Career',
       includeNav: true,
-      isSupport: true
+      isSupport: true,
+      parentNav: null
+    }
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
+    data: {
+      title: 'Blog',
+      includeNav: true,
+      isSupport: false,
+      parentNav: null
+    }
+  },
+  {
+    path: 'blog/:id',
+    component: BlogDetailsComponent,
+    data: {
+      title: 'Blog Details',
+      includeNav: false,
+      isSupport: false,
+      parentNav: 'blog'
     }
   },
   {
@@ -71,7 +99,8 @@ const routes: Routes = [
     data: {
       title: 'Contact Us',
       includeNav: true,
-      isSupport: true
+      isSupport: true,
+      parentNav: null
     }
   },
   {
@@ -84,7 +113,8 @@ const routes: Routes = [
     data: {
       title: 'Page not found',
       includeNav: false,
-      isSupport: false
+      isSupport: false,
+      parentNav: null
     }
   }
 ];

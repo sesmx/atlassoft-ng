@@ -19,7 +19,7 @@ export class PortfolioDetailsComponent implements OnInit {
       name: 'Portfolio',
       path: '/portfolio'
     }
-  ]
+  ];
 
   constructor(private titleService: Title, private router: Router, private route: ActivatedRoute, private portfolioService: PortfolioService, private commonService: CommonService) {
     this.router.config.forEach(routerItem => {
@@ -34,7 +34,6 @@ export class PortfolioDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.portfolioService.getById(this.route.snapshot.paramMap.get('id')).subscribe((data: Portfolio) => {
       this.selectedProfile = data;
-      console.log(this.selectedProfile);
       if (this.selectedProfile === undefined || this.selectedProfile === null) {
         this.router.navigate(['/error']);
       }

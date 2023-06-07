@@ -27,6 +27,9 @@ import { SafePipe } from './pipes/safe.pipe';
 import { ScrollTopComponent } from './common/scroll-top/scroll-top.component';
 import { CookieBarComponent } from './common/cookie-bar/cookie-bar.component';
 import { CommonErrorComponent } from './common-error/common-error.component';
+import { BlogComponent } from './blog/blog.component';
+import { ShortPipe } from './pipes/short.pipe';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { CommonErrorComponent } from './common-error/common-error.component';
     SafePipe,
     ScrollTopComponent,
     CookieBarComponent,
-    CommonErrorComponent
+    CommonErrorComponent,
+    BlogComponent,
+    ShortPipe,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

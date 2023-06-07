@@ -1,0 +1,39 @@
+<div class="main-content">
+    <app-navigation-map></app-navigation-map>
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let blog of this.blogs" class="col-sm-12 col-lg-6">
+                    <div class="blog-box mt-5">
+                        <div class="row no-gutters row-eq-height pb-4">
+                            <div class="col-sm-6 iq-shadow">
+                                <div class="content">
+                                    <h6 class="mb-2">{{ blog.blogHeader }}</h6>
+                                    <ul>
+                                        <li>
+                                            <span>Posted by:</span>
+                                            <a href="javascript:void(0);">&nbsp;{{ blog.blogPostedBy }}</a>
+                                        </li>
+                                        <li>
+                                            <span>Posted on:</span>
+                                            <a href="javascript:void(0);">&nbsp;{{ blog.blogPostDate | date: 'dd-MMMM-yy' }}</a>
+                                        </li>
+                                    </ul>
+                                    <p class="mt-4">{{ blog.blogDetail | short: 70 }}</p>
+                                    <ul class="iq-tag mt-4">
+                                        <li>
+                                            <a routerLink="/blog/{{ blog.id }}" title="Read more">Read more...</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 div-border">
+                                <img class="img-fluid" [src]="blog.blogImage" [alt]="blog.blogHeader" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+</div>

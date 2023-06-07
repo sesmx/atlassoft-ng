@@ -15,9 +15,11 @@ export class NavigationMapComponent {
     this.router.config.forEach(routerItem => {
       if (this.router.parseUrl(this.router.url).toString() === `/${routerItem['path']}`) {
         this.currentRouteName = routerItem['data']?.['title'];
-      } else if (this.route.snapshot.paramMap.get('id') !== undefined && this.route.snapshot.paramMap.get('id') !== null && !routerItem['data']?.['includeNav']) {
-        console.log("pocha", routerItem['data']);
-        this.currentRouteName = this.currentRouteName === '' ? routerItem['data']?.['title'] : this.currentRouteName;
+      } else if (this.route.snapshot.paramMap.get('id') !== undefined && this.route.snapshot.paramMap.get('id') !== null && !routerItem['data']?.['includeNav'] && routerItem['data']?.['parentNav'] !== null) {
+        //console.log("pocha", routerItem['data']);
+        if (this.router.parseUrl(this.router.url).toString()?.includes(routerItem['data']?.['parentNav'])) {
+          this.currentRouteName = this.currentRouteName === '' ? routerItem['data']?.['title'] : this.currentRouteName;
+        }
       }
     });
   }
