@@ -32,7 +32,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0 mb-md-0">
+                <div *ngIf="false" class="col-lg-2 col-md-6 mb-5 mb-lg-0 mb-md-0">
                     <h4 class="iq-fw-7 mb-3">Help</h4>
                     <ul class="d-block">
                         <li class="d-block iq-fw-6 mb-2" *ngFor="let menu of this.supportItems.slice(0, 4)">
@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <h4 class="iq-fw-7 mb-4">Quick Contact</h4>
                     <form>
                         <input type="email" name="" placeholder="Enter Email" class="subscription-email position-relative form-control d-inline-block" />
