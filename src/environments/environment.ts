@@ -1,3 +1,3 @@
 export const environment = {
-    baseApiUrl: 'http://atlassoftapi.azurewebsites.net/'
+    baseApiUrl: 'https://atlassoftapi.azurewebsites.net/'
 };

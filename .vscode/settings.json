@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/784a75a9-1bea-4d5e-b0ef-064e3d08c86c/resourceGroups/azure-maps-rg/providers/Microsoft.Web/sites/atlasfront",
+    "appService.deploySubpath": "."
+}
